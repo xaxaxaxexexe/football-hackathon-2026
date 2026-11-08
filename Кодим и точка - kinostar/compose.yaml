@@ -1,0 +1,16 @@
+services:
+  kinostar:
+    build: .
+    ports:
+      - "4173:4173"
+    environment:
+      HOST: 0.0.0.0
+      PORT: 4173
+      DB_PATH: /data/kinostar.sqlite
+      PAYMENT_MODE: demo
+      PUBLIC_BASE_URL: http://localhost:4173
+    volumes:
+      - kinostar_data:/data
+    restart: unless-stopped
+volumes:
+  kinostar_data:

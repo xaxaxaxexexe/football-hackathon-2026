@@ -1,0 +1,9 @@
+{
+  "name": "kinostar-walkthrough",
+  "private": true,
+  "scripts": {
+    "dev": "node --env-file-if-exists=.env server.cjs",
+    "test": "node --test *.test.cjs"
+  },
+  "engines": { "node": ">=24" }
+}
